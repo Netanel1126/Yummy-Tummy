@@ -22,6 +22,7 @@
 		473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */; };
 		6D5EED180F7CC2DE9DCDE57C /* Pods_Yummy_TummyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */; };
 		84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84700FEA2001339700677DFB /* GoogleService-Info.plist */; };
+		84700FED2001613400677DFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84700FEC2001613300677DFB /* libsqlite3.0.tbd */; };
 		D5B164FF491E68F5D08EFC26 /* Pods_Yummy_TummyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		72C2E879F9EF2BFAC9A78849 /* Pods-Yummy TummyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyTests/Pods-Yummy TummyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_TummyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84700FEA2001339700677DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84700FEC2001613300677DFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy Tummy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy.debug.xcconfig"; sourceTree = "<group>"; };
 		B8E9F8241ED32A4C1154D8DF /* Pods-Yummy TummyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyUITests/Pods-Yummy TummyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_Tummy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84700FED2001613400677DFB /* libsqlite3.0.tbd in Frameworks */,
 				473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		07FEBAA32325FE781E00C068 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84700FEC2001613300677DFB /* libsqlite3.0.tbd */,
 				C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */,
 				7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */,
 				0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */,
