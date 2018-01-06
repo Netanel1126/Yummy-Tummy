@@ -19,6 +19,10 @@
 		30430D4B1FFD3A3700CA2B77 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30430D4A1FFD3A3700CA2B77 /* Model.swift */; };
 		30430D4D1FFD3A5A00CA2B77 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30430D4C1FFD3A5A00CA2B77 /* FirebaseModel.swift */; };
 		30430D4F1FFD3A8000CA2B77 /* SQLiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */; };
+		473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */; };
+		6D5EED180F7CC2DE9DCDE57C /* Pods_Yummy_TummyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */; };
+		84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84700FEA2001339700677DFB /* GoogleService-Info.plist */; };
+		D5B164FF491E68F5D08EFC26 /* Pods_Yummy_TummyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_TummyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2346C152ACCB44338731DFCE /* Pods-Yummy Tummy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy Tummy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy.release.xcconfig"; sourceTree = "<group>"; };
 		30430D141FFD37BD00CA2B77 /* Yummy Tummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yummy Tummy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30430D171FFD37BD00CA2B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30430D191FFD37BD00CA2B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,14 @@
 		30430D4A1FFD3A3700CA2B77 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		30430D4C1FFD3A5A00CA2B77 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteModel.swift; sourceTree = "<group>"; };
+		72C2E879F9EF2BFAC9A78849 /* Pods-Yummy TummyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyTests/Pods-Yummy TummyTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_TummyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84700FEA2001339700677DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy Tummy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy.debug.xcconfig"; sourceTree = "<group>"; };
+		B8E9F8241ED32A4C1154D8DF /* Pods-Yummy TummyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyUITests/Pods-Yummy TummyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_Tummy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52F4E79CD1F9E7EA06D3DD2 /* Pods-Yummy TummyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyTests/Pods-Yummy TummyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4EC36FC46A922660BD33A8 /* Pods-Yummy TummyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyUITests/Pods-Yummy TummyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B164FF491E68F5D08EFC26 /* Pods_Yummy_TummyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5EED180F7CC2DE9DCDE57C /* Pods_Yummy_TummyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07FEBAA32325FE781E00C068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */,
+				7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */,
+				0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16C551C70C2E377971FC2A0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */,
+				2346C152ACCB44338731DFCE /* Pods-Yummy Tummy.release.xcconfig */,
+				E52F4E79CD1F9E7EA06D3DD2 /* Pods-Yummy TummyTests.debug.xcconfig */,
+				72C2E879F9EF2BFAC9A78849 /* Pods-Yummy TummyTests.release.xcconfig */,
+				FA4EC36FC46A922660BD33A8 /* Pods-Yummy TummyUITests.debug.xcconfig */,
+				B8E9F8241ED32A4C1154D8DF /* Pods-Yummy TummyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		30430D0B1FFD37BD00CA2B77 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +131,8 @@
 				30430D2B1FFD37BD00CA2B77 /* Yummy TummyTests */,
 				30430D361FFD37BD00CA2B77 /* Yummy TummyUITests */,
 				30430D151FFD37BD00CA2B77 /* Products */,
+				16C551C70C2E377971FC2A0D /* Pods */,
+				07FEBAA32325FE781E00C068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +156,7 @@
 				30430D1E1FFD37BD00CA2B77 /* Assets.xcassets */,
 				30430D201FFD37BD00CA2B77 /* LaunchScreen.storyboard */,
 				30430D231FFD37BD00CA2B77 /* Info.plist */,
+				84700FEA2001339700677DFB /* GoogleService-Info.plist */,
 			);
 			path = "Yummy Tummy";
 			sourceTree = "<group>";
@@ -155,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30430D3C1FFD37BD00CA2B77 /* Build configuration list for PBXNativeTarget "Yummy Tummy" */;
 			buildPhases = (
+				A59944F568DF62FBE0B374BA /* [CP] Check Pods Manifest.lock */,
 				30430D101FFD37BD00CA2B77 /* Sources */,
 				30430D111FFD37BD00CA2B77 /* Frameworks */,
 				30430D121FFD37BD00CA2B77 /* Resources */,
+				C6BA39A598A69FFD0632E55B /* [CP] Embed Pods Frameworks */,
+				604A56421D6B3ED990CC596E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30430D3F1FFD37BD00CA2B77 /* Build configuration list for PBXNativeTarget "Yummy TummyTests" */;
 			buildPhases = (
+				1D29965230A7C9B2918EDAA5 /* [CP] Check Pods Manifest.lock */,
 				30430D241FFD37BD00CA2B77 /* Sources */,
 				30430D251FFD37BD00CA2B77 /* Frameworks */,
 				30430D261FFD37BD00CA2B77 /* Resources */,
+				5582A146D3CE7AAC7D2DB9AA /* [CP] Embed Pods Frameworks */,
+				35B59DFD7B529BAFEEF85120 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30430D421FFD37BD00CA2B77 /* Build configuration list for PBXNativeTarget "Yummy TummyUITests" */;
 			buildPhases = (
+				96941F7E461941FCB75548CF /* [CP] Check Pods Manifest.lock */,
 				30430D2F1FFD37BD00CA2B77 /* Sources */,
 				30430D301FFD37BD00CA2B77 /* Frameworks */,
 				30430D311FFD37BD00CA2B77 /* Resources */,
+				A8083A4816D9954687B3AAB6 /* [CP] Embed Pods Frameworks */,
+				9551F0E71CA4A302987BA3BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */,
 				30430D221FFD37BD00CA2B77 /* LaunchScreen.storyboard in Resources */,
 				30430D1F1FFD37BD00CA2B77 /* Assets.xcassets in Resources */,
 				30430D1D1FFD37BD00CA2B77 /* Main.storyboard in Resources */,
@@ -276,6 +329,162 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D29965230A7C9B2918EDAA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yummy TummyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35B59DFD7B529BAFEEF85120 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yummy TummyTests/Pods-Yummy TummyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5582A146D3CE7AAC7D2DB9AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yummy TummyTests/Pods-Yummy TummyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		604A56421D6B3ED990CC596E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9551F0E71CA4A302987BA3BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yummy TummyUITests/Pods-Yummy TummyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96941F7E461941FCB75548CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yummy TummyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A59944F568DF62FBE0B374BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yummy Tummy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8083A4816D9954687B3AAB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yummy TummyUITests/Pods-Yummy TummyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6BA39A598A69FFD0632E55B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30430D101FFD37BD00CA2B77 /* Sources */ = {
@@ -452,6 +661,7 @@
 		};
 		30430D3D1FFD37BD00CA2B77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +676,7 @@
 		};
 		30430D3E1FFD37BD00CA2B77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2346C152ACCB44338731DFCE /* Pods-Yummy Tummy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +691,7 @@
 		};
 		30430D401FFD37BD00CA2B77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E52F4E79CD1F9E7EA06D3DD2 /* Pods-Yummy TummyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +708,7 @@
 		};
 		30430D411FFD37BD00CA2B77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C2E879F9EF2BFAC9A78849 /* Pods-Yummy TummyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +725,7 @@
 		};
 		30430D431FFD37BD00CA2B77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA4EC36FC46A922660BD33A8 /* Pods-Yummy TummyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +741,7 @@
 		};
 		30430D441FFD37BD00CA2B77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8E9F8241ED32A4C1154D8DF /* Pods-Yummy TummyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

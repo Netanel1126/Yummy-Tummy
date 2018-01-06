@@ -1,0 +1,6 @@
+framework module Pods_Yummy_Tummy {
+  umbrella header "Pods-Yummy Tummy-umbrella.h"
+
+  export *
+  module * { export * }
+}
