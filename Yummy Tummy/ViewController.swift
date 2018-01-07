@@ -1,15 +1,8 @@
-//
-//  ViewController.swift
-//  Yummy Tummy
-//
-//  Created by Netanel Yeroshalmi on 03/01/2018.
-//  Copyright © 2018 Netanel Yeroshalmi. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +13,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func addUser(_ sender: Any) {
+        var newUser:User
+    }
+    
 }
 
