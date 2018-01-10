@@ -4,25 +4,18 @@ import FirebaseDatabase
 
 class FirebaseModel{
     let ref:DatabaseReference?
-    
+    var validateUsername:Bool;
+
     init(){
         FirebaseApp.configure()
         ref = Database.database().reference()
+        
+        validateUsername = false
     }
     
-    func writeUserToFirebase(newUser:User) -> Bool{
-        var myRef = ref?.child("Users")
-        var validateUsername:Bool;
-        readUserFromFirebase(byId: newUser.username) {(user) in
-            if user != nil{
-                myRef.setValue(newUser.toJson())
-                validateUsername = true
-            }
-            else{
-                validateUsername = false
-                }
-        }
-        return true
+    func writeUserToFirebase(newUser:User){
+        var myRef = ref?.child("Users").child(newUser.username)
+        myRef?.setValue(newUser.toJson())
     }
     
     func readUserFromFirebase(byId:String, callback: @escaping (User?) -> Void){
@@ -33,6 +26,7 @@ class FirebaseModel{
                 let user = User(fromJson: val)
                 callback(user)
             }else{
+                print("User is nil")
                 callback(nil)
             }
         })
