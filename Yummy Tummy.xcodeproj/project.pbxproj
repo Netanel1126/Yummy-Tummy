@@ -21,6 +21,7 @@
 		30430D4F1FFD3A8000CA2B77 /* SQLiteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */; };
 		473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */; };
 		6D5EED180F7CC2DE9DCDE57C /* Pods_Yummy_TummyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */; };
+		840084952040405D0039E93F /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840084942040405D0039E93F /* Swift+Gif.swift */; };
 		84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84700FEA2001339700677DFB /* GoogleService-Info.plist */; };
 		84700FED2001613400677DFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84700FEC2001613300677DFB /* libsqlite3.0.tbd */; };
 		D5B164FF491E68F5D08EFC26 /* Pods_Yummy_TummyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */; };
@@ -66,6 +67,8 @@
 		30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteModel.swift; sourceTree = "<group>"; };
 		72C2E879F9EF2BFAC9A78849 /* Pods-Yummy TummyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyTests/Pods-Yummy TummyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_TummyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840084942040405D0039E93F /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		840084962040415C0039E93F /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		84700FEA2001339700677DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84700FEC2001613300677DFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy Tummy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 				30430D201FFD37BD00CA2B77 /* LaunchScreen.storyboard */,
 				30430D231FFD37BD00CA2B77 /* Info.plist */,
 				84700FEA2001339700677DFB /* GoogleService-Info.plist */,
+				840084962040415C0039E93F /* Loading.gif */,
 			);
 			path = "Yummy Tummy";
 			sourceTree = "<group>";
@@ -191,6 +195,7 @@
 				30430D4A1FFD3A3700CA2B77 /* Model.swift */,
 				30430D4C1FFD3A5A00CA2B77 /* FirebaseModel.swift */,
 				30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */,
+				840084942040405D0039E93F /* Swift+Gif.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 				30430D4D1FFD3A5A00CA2B77 /* FirebaseModel.swift in Sources */,
 				30430D4B1FFD3A3700CA2B77 /* Model.swift in Sources */,
 				30430D1A1FFD37BD00CA2B77 /* ViewController.swift in Sources */,
+				840084952040405D0039E93F /* Swift+Gif.swift in Sources */,
 				30430D181FFD37BD00CA2B77 /* AppDelegate.swift in Sources */,
 				30430D471FFD39E900CA2B77 /* User.swift in Sources */,
 				30430D4F1FFD3A8000CA2B77 /* SQLiteModel.swift in Sources */,
