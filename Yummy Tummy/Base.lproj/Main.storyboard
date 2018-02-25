@@ -54,17 +54,12 @@
                                     <segue destination="GWj-g2-GGj" kind="show" id="7Ma-sg-4aY"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jen-8y-jMV">
-                                <rect key="frame" x="54" y="412" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.7285867471988795" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="errorLable" destination="cmY-gm-7vp" id="hT0-A0-3a8"/>
-                        <outlet property="gif" destination="jen-8y-jMV" id="agp-jA-Rnt"/>
                         <outlet property="textField" destination="Pjm-KO-fkF" id="5jU-ln-fDB"/>
                     </connections>
                 </viewController>
@@ -122,6 +117,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Welcome-Image" translatesAutoresizingMaskIntoConstraints="NO" id="icd-G4-fSP">
+                                <rect key="frame" x="67" y="35" width="240" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -146,4 +145,7 @@
             <point key="canvasLocation" x="1404" y="16.641679160419791"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Welcome-Image" width="500" height="266"/>
+    </resources>
 </document>

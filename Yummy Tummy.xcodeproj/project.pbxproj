@@ -206,9 +206,9 @@
 				30430D481FFD39FD00CA2B77 /* Recipe.swift */,
 				30430D4A1FFD3A3700CA2B77 /* Model.swift */,
 				30430D4C1FFD3A5A00CA2B77 /* FirebaseModel.swift */,
+				840084962040415C0039E93F /* Loading.gif */,
 				30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */,
 				840084942040405D0039E93F /* Swift+Gif.swift */,
-				840084962040415C0039E93F /* Loading.gif */,
 			);
 			path = Model;
 			sourceTree = "<group>";
