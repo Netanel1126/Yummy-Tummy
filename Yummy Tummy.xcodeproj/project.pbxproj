@@ -22,6 +22,8 @@
 		473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */; };
 		6D5EED180F7CC2DE9DCDE57C /* Pods_Yummy_TummyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */; };
 		840084952040405D0039E93F /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840084942040405D0039E93F /* Swift+Gif.swift */; };
+		842864462043209C00196037 /* WorkWithStorage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842864452043209C00196037 /* WorkWithStorage.storyboard */; };
+		842864482043218300196037 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842864472043218300196037 /* CustomTableViewCell.swift */; };
 		84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84700FEA2001339700677DFB /* GoogleService-Info.plist */; };
 		84700FED2001613400677DFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84700FEC2001613300677DFB /* libsqlite3.0.tbd */; };
 		849B4123204188110042946C /* Log in Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B4122204188110042946C /* Log in Screen.storyboard */; };
@@ -72,6 +74,8 @@
 		7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_TummyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840084942040405D0039E93F /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
 		840084962040415C0039E93F /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
+		842864452043209C00196037 /* WorkWithStorage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkWithStorage.storyboard; sourceTree = "<group>"; };
+		842864472043218300196037 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		84700FEA2001339700677DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84700FEC2001613300677DFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		849B4122204188110042946C /* Log in Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Log in Screen.storyboard"; sourceTree = "<group>"; };
@@ -165,12 +169,14 @@
 				30430D171FFD37BD00CA2B77 /* AppDelegate.swift */,
 				30430D191FFD37BD00CA2B77 /* ViewController.swift */,
 				30430D1B1FFD37BD00CA2B77 /* Main.storyboard */,
+				842864452043209C00196037 /* WorkWithStorage.storyboard */,
 				30430D1E1FFD37BD00CA2B77 /* Assets.xcassets */,
 				30430D201FFD37BD00CA2B77 /* LaunchScreen.storyboard */,
 				30430D231FFD37BD00CA2B77 /* Info.plist */,
 				84700FEA2001339700677DFB /* GoogleService-Info.plist */,
 				849B4122204188110042946C /* Log in Screen.storyboard */,
 				849B412420418B750042946C /* LogIn_ViewController.swift */,
+				842864472043218300196037 /* CustomTableViewCell.swift */,
 			);
 			path = "Yummy Tummy";
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			files = (
 				84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */,
 				849B4123204188110042946C /* Log in Screen.storyboard in Resources */,
+				842864462043209C00196037 /* WorkWithStorage.storyboard in Resources */,
 				30430D221FFD37BD00CA2B77 /* LaunchScreen.storyboard in Resources */,
 				849B412D204237DD0042946C /* Loading.gif in Resources */,
 				30430D1F1FFD37BD00CA2B77 /* Assets.xcassets in Resources */,
@@ -413,7 +420,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -531,6 +538,7 @@
 				840084952040405D0039E93F /* Swift+Gif.swift in Sources */,
 				30430D181FFD37BD00CA2B77 /* AppDelegate.swift in Sources */,
 				30430D471FFD39E900CA2B77 /* User.swift in Sources */,
+				842864482043218300196037 /* CustomTableViewCell.swift in Sources */,
 				849B412520418B750042946C /* LogIn_ViewController.swift in Sources */,
 				30430D4F1FFD3A8000CA2B77 /* SQLiteModel.swift in Sources */,
 				30430D491FFD39FD00CA2B77 /* Recipe.swift in Sources */,
