@@ -4,11 +4,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     let fireModel = FirebaseModel()
     
+    @IBOutlet weak var gif: UIImageView!
     @IBOutlet weak var errorLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        gif.loadGif(name: "Loading")
     }
 
     override func didReceiveMemoryWarning() {
