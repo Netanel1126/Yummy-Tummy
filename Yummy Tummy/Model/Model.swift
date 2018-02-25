@@ -1,5 +1,10 @@
 import Foundation
 
-class model{
+class Model{
     
+    let fireModel:FirebaseModel;
+    
+    init() {
+        fireModel = FirebaseModel()
+    }
 }

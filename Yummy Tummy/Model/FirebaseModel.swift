@@ -6,7 +6,6 @@ import FBSDKCoreKit
 
 class FirebaseModel: NSObject, GIDSignInDelegate {
     let ref:DatabaseReference?
-    //var validateUsername:Bool;
     
     override init(){
         
@@ -17,7 +16,7 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
-      //  validateUsername = false
+        print("User: ", Auth.auth().currentUser?.email)
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
