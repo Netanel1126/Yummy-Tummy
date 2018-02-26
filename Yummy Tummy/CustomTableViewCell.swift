@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
+class CustomTableViewCell/*: UITableViewCell, UITableViewDataSource, UITableViewDelegate*/ {
     
     let firebase = FirebaseModel()
     
@@ -16,9 +16,8 @@ class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDe
         return 1
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let pic = firebase.getImageFromStorage(fromBucket: "StartMenuSprite.png")
-        
+    /*public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  //      let pic = firebase.getImageFromStorage(fromBucket: "StartMenuSprite.png")
     }
 
     override func awakeFromNib() {
@@ -30,6 +29,6 @@ class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDe
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+    }*/
 
 }

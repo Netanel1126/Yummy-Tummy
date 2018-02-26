@@ -1,17 +1,14 @@
 import Foundation
 
 class User{
-   // let userID:String
     let username:String
     
-    init(/*userId: String,
- */username: String, recipes: [Recipe]) {
-        //self.userID = userId
+    init(userId: String,
+   username: String, recipes: [Recipe]) {
         self.username = username
     }
     
-    init(/*userId: String,*/ username: String) {
-        //self.userID = userId
+    init(username: String) {
         self.username = username
     }
     

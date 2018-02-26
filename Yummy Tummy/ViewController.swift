@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
-    let model = Model()
+   // let model = Model()
     
     @IBOutlet weak var errorLable: UILabel!
     
