@@ -6,6 +6,7 @@ import FBSDKCoreKit
 
 class FirebaseModel: NSObject, GIDSignInDelegate {
     let ref:DatabaseReference?
+    var image: UIImage
     
     override init(){
         
@@ -14,6 +15,22 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+    }
+    
+    func getNumberOfImages() -> Int {
+        return Storage.storage().reference().root().accessibilityElementCount()
+    }
+    
+    func getImage(fromURI: String) -> UIImage {
+        let storageRef = Storage.storage().reference(forURL: fromURI)
+        storageRef.getData(maxSize: 650 * 1024) { data, error in
+            if error != nil {
+            print(error)
+            return
+            }
+            
+            image = UIImage(data: data!)
+        }
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {

@@ -8,18 +8,11 @@
 
 import UIKit
 
-class CustomTableViewCell/*: UITableViewCell, UITableViewDataSource, UITableViewDelegate*/ {
+class CustomTableViewCell: UITableViewCell {
     
-    let firebase = FirebaseModel()
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var recipeName: UILabel!
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    /*public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-  //      let pic = firebase.getImageFromStorage(fromBucket: "StartMenuSprite.png")
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +22,6 @@ class CustomTableViewCell/*: UITableViewCell, UITableViewDataSource, UITableView
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }*/
+    }
 
 }
