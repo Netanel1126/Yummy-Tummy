@@ -5,7 +5,7 @@ import Firebase
 
 class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButtonDelegate {
     
-    //let fireModel = FirebaseModel()
+    let model = Model()
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var emailTaxt: UITextField!
     @IBOutlet weak var passworText: UITextField!
@@ -17,8 +17,23 @@ class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButto
         
         setupFacebookButton()
         setupGoogleButton()
+        
+        ModelNotification.ConnectedUser.observe { (user) in
+            print("User is: ", user)
+            if(user != nil){
+                self.loadMainController()
+            }
+        }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        Model.getConnectedUser()
+    }
+    
+    func loadMainController(){
+        self.performSegue(withIdentifier: "LogedIn", sender: self)
+    }
+    
     fileprivate func setupGoogleButton(){
         let googleButton = GIDSignInButton()
         googleButton.frame = CGRect(x: 16, y: 476, width: view.frame.width - 32, height: 50)
@@ -59,6 +74,7 @@ class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButto
                 return
             }
             print(user, "Loged In")
+            self.loadMainController()
             return
         }
         
@@ -72,12 +88,14 @@ class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButto
     }
     
     @IBAction func SignInWithEmail(_ sender: UIButton) {
+        
         Auth.auth().createUser(withEmail: emailTaxt.text!, password: passworText.text!){ (user, error) in
             if error != nil{
                 print("ERROR - Something went wrong with our user: ",error)
                 return
             }
             print(user, "Loged In")
+            self.loadMainController()
             return
         }
     }

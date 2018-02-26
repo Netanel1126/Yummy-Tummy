@@ -6,18 +6,14 @@ import FBSDKCoreKit
 
 class FirebaseModel: NSObject, GIDSignInDelegate {
     let ref:DatabaseReference?
-    //var validateUsername:Bool;
     
     override init(){
         
-        FirebaseApp.configure()
         ref = Database.database().reference()
         super.init()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
-      //  validateUsername = false
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -38,6 +34,18 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
             
             print(user," Logged In")
         }
+    }
+    
+   static func getCconnectedUserAndObserve(callback: @escaping (String?)-> Void){
+    let userEmail = Auth.auth().currentUser?.email;
+    var test = Auth.auth().currentUser;
+    if userEmail != nil {
+        print ("E: ", test?.email,"U: " , test?.uid ,"P: " , test?.photoURL)
+        callback(userEmail)
+    }
+    else{
+        callback(nil)
+    }
     }
     
     
