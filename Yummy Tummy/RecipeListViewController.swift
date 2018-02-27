@@ -17,9 +17,10 @@ class RecipeListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
-
-        recipeImage.image = firebase.image
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as! CustomTableViewCell
+        
+        firebase.getImage(fromURI: "gs://yummy-tummy-5bdc2.appspot.com")
+        cell.recipeImage.image = firebase.image
 
         return cell
     }
