@@ -5,13 +5,13 @@ import GoogleSignIn
 import FBSDKCoreKit
 
 class FirebaseModel: NSObject, GIDSignInDelegate {
-    static var ref:DatabaseReference?
-    //var image: UIImage
+    var ref:DatabaseReference?
+    var image: UIImage!
     
     override init(){
         
-        FirebaseModel.ref = Database.database().reference()
         super.init()
+        self.ref = Database.database().reference()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
@@ -21,15 +21,15 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
         return Storage.storage().reference().root().accessibilityElementCount()
     }
     
-    /*func getImage(fromURI: String) -> UIImage {
+    func getImage(fromURI: String) {
         let storageRef = Storage.storage().reference(forURL: fromURI)
         storageRef.getData(maxSize: 650 * 1024) { data, error in
             if error != nil {
-            print(error)
-            return
+                print(error!)
+                return
             }
             
-            image = UIImage(data: data!)
+            self.image = UIImage(data: data!)
         }
     }*/
     
