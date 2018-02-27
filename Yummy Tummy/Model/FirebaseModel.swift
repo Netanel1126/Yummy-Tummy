@@ -31,7 +31,7 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
             
             self.image = UIImage(data: data!)
         }
-    }
+    }*/
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let err = error {
@@ -65,14 +65,18 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
     }
     }
     
+   static func writRecipeToFB(recipe:Recipe){
+        var myRef = ref?.child("Recipe").child(recipe.recpieID)
+        myRef?.setValue(recipe.toJson())
+    }
     
     func writeUserToFirebase(newUser:User){
-        var myRef = ref?.child("Users").child(newUser.username)
+        var myRef = FirebaseModel.ref?.child("Users").child(newUser.username)
         myRef?.setValue(newUser.toJson())
     }
     
     func readUserFromFirebase(byId:String, callback: @escaping (User?) -> Void){
-        let myRef = ref?.child("Users").child(byId)
+        let myRef = FirebaseModel.ref?.child("Users").child(byId)
         
         myRef?.observeSingleEvent(of: .value, with: { (snapshot) in
             if let val = snapshot.value as? [String:Any]{

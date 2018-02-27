@@ -1,5 +1,17 @@
 import Foundation
 
+extension String {
+    public init?(validatingUTF8 cString: UnsafePointer<UInt8>) {
+        if let (result, _) = String.decodeCString(cString, as: UTF8.self,
+                                                  repairingInvalidCodeUnits: false) {
+            self = result
+        }
+        else {
+            return nil
+        }
+    }
+}
+
 class Recipe{
     var recpieID:String
     var recipeText:String
@@ -29,7 +41,9 @@ class Recipe{
         toJson["recpieID"] = recpieID
         toJson["title"] = title
         toJson["recipeText"] = recipeText
-        toJson["imageUrl"] = imageUrl!
+        if imageUrl != nil{
+            toJson["imageUrl"] = imageUrl!
+        }else{imageUrl = ""}
         return toJson
     }
     

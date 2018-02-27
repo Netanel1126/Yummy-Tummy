@@ -24,6 +24,8 @@
 		840084952040405D0039E93F /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840084942040405D0039E93F /* Swift+Gif.swift */; };
 		842864462043209C00196037 /* WorkWithStorage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842864452043209C00196037 /* WorkWithStorage.storyboard */; };
 		842864482043218300196037 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842864472043218300196037 /* CustomTableViewCell.swift */; };
+		846BFA052045649600809030 /* Recipe+Sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BFA042045649600809030 /* Recipe+Sql.swift */; };
+		846BFA092045876400809030 /* AddRecpieTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BFA082045876400809030 /* AddRecpieTestViewController.swift */; };
 		84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84700FEA2001339700677DFB /* GoogleService-Info.plist */; };
 		84700FED2001613400677DFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84700FEC2001613300677DFB /* libsqlite3.0.tbd */; };
 		847511592044A07D00CE26F9 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847511582044A07D00CE26F9 /* RecipeListViewController.swift */; };
@@ -77,11 +79,14 @@
 		840084962040415C0039E93F /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		842864452043209C00196037 /* WorkWithStorage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkWithStorage.storyboard; sourceTree = "<group>"; };
 		842864472043218300196037 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		846BFA042045649600809030 /* Recipe+Sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+Sql.swift"; sourceTree = "<group>"; };
+		846BFA082045876400809030 /* AddRecpieTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecpieTestViewController.swift; sourceTree = "<group>"; };
 		84700FEA2001339700677DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84700FEC2001613300677DFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		847511582044A07D00CE26F9 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
 		849B4122204188110042946C /* Log in Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Log in Screen.storyboard"; sourceTree = "<group>"; };
 		849B412420418B750042946C /* LogIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_ViewController.swift; sourceTree = "<group>"; };
+		84E8091C2044A4B700A9D341 /* Yummy Tummy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yummy Tummy-Bridging-Header.h"; sourceTree = "<group>"; };
 		8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy Tummy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy Tummy/Pods-Yummy Tummy.debug.xcconfig"; sourceTree = "<group>"; };
 		B8E9F8241ED32A4C1154D8DF /* Pods-Yummy TummyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yummy TummyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yummy TummyUITests/Pods-Yummy TummyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_Tummy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +185,8 @@
 				849B4122204188110042946C /* Log in Screen.storyboard */,
 				849B412420418B750042946C /* LogIn_ViewController.swift */,
 				842864472043218300196037 /* CustomTableViewCell.swift */,
+				84E8091C2044A4B700A9D341 /* Yummy Tummy-Bridging-Header.h */,
+				846BFA082045876400809030 /* AddRecpieTestViewController.swift */,
 			);
 			path = "Yummy Tummy";
 			sourceTree = "<group>";
@@ -212,6 +219,7 @@
 				840084962040415C0039E93F /* Loading.gif */,
 				30430D4E1FFD3A8000CA2B77 /* SQLiteModel.swift */,
 				840084942040405D0039E93F /* Swift+Gif.swift */,
+				846BFA042045649600809030 /* Recipe+Sql.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 				TargetAttributes = {
 					30430D131FFD37BD00CA2B77 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -540,6 +549,7 @@
 			files = (
 				30430D4D1FFD3A5A00CA2B77 /* FirebaseModel.swift in Sources */,
 				30430D4B1FFD3A3700CA2B77 /* Model.swift in Sources */,
+				846BFA052045649600809030 /* Recipe+Sql.swift in Sources */,
 				847511592044A07D00CE26F9 /* RecipeListViewController.swift in Sources */,
 				30430D1A1FFD37BD00CA2B77 /* ViewController.swift in Sources */,
 				840084952040405D0039E93F /* Swift+Gif.swift in Sources */,
@@ -548,6 +558,7 @@
 				842864482043218300196037 /* CustomTableViewCell.swift in Sources */,
 				849B412520418B750042946C /* LogIn_ViewController.swift in Sources */,
 				30430D4F1FFD3A8000CA2B77 /* SQLiteModel.swift in Sources */,
+				846BFA092045876400809030 /* AddRecpieTestViewController.swift in Sources */,
 				30430D491FFD39FD00CA2B77 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -715,12 +726,15 @@
 			baseConfigurationReference = 8F8635E9D38880ACB9AD905B /* Pods-Yummy Tummy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DT9HA3X5K;
 				INFOPLIST_FILE = "Yummy Tummy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YummyTummy.Yummy-Tummy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yummy Tummy/Yummy Tummy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -731,12 +745,14 @@
 			baseConfigurationReference = 2346C152ACCB44338731DFCE /* Pods-Yummy Tummy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DT9HA3X5K;
 				INFOPLIST_FILE = "Yummy Tummy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YummyTummy.Yummy-Tummy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yummy Tummy/Yummy Tummy-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
