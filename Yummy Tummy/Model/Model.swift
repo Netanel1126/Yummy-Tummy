@@ -31,7 +31,8 @@ class ModelNotification{
 class Model{
     static let instance = Model()
     let fire = FirebaseModel()
-    
+    lazy private var modelSql:SqLiteModel? = SqLiteModel()
+
     init() {
     }
     

@@ -4,8 +4,12 @@ class SqLiteModel{
     var database:OpaquePointer? = nil
     let dbName = "YT_database.db"
     
-    init() {
+    init?() {
         initDb()
+        
+        if Recipe.createTable(database: database) == false{
+            return nil
+        }
     }
     
     func initDb(){
