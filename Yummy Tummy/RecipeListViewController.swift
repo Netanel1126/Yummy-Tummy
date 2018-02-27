@@ -16,11 +16,11 @@ class RecipeListViewController: UITableViewController {
         return firebase.getNumberOfImages()
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   /* override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
 
         recipeImage.image = firebase.image
 
         return cell
-    }
+    }*/
 }
