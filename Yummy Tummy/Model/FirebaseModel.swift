@@ -70,6 +70,38 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
         myRef?.setValue(recipe.toJson())
     }
     
+    static func readAllRecipeFromFB(callback: @escaping ([Recipe]?) -> Void){
+        var myRef = ref?.child("Recipe")
+        var myRecipes = [Recipe]()
+        
+        let handler = {(snapshot:DataSnapshot) in
+            for child in snapshot.children.allObjects{
+                if let childData = child as? DataSnapshot{
+                    if let json = childData.value as? Dictionary<String,Any>{
+                        let rec = Recipe(fromJson: json)
+                        myRecipes.append(rec)
+                    }
+                }
+            }
+            callback(myRecipes)
+        }
+        
+        myRef?.observe(DataEventType.value, with: handler)
+    }
+    
+    static func readRecipe(byId: String, callback: @escaping (Recipe?) -> Void){
+        var myRef = ref?.child("Recipe").child(byId)
+        
+        myRef?.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let val = snapshot.value as? [String:Any]{
+                let recipe = Recipe(fromJson: val)
+                callback(recipe)
+            }else{
+                callback(nil)
+            }
+        })
+    }
+    
     func writeUserToFirebase(newUser:User){
         var myRef = FirebaseModel.ref?.child("Users").child(newUser.username)
         myRef?.setValue(newUser.toJson())

@@ -27,7 +27,7 @@ class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButto
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        Model.getConnectedUser()
+        Model.instance.getConnectedUser()
     }
     
     func loadMainController(){

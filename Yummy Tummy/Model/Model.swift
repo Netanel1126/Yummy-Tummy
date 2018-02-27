@@ -22,6 +22,7 @@ class ModelNotificationBase<T>{
 
 class ModelNotification{
     static let ConnectedUser = ModelNotificationBase<String>(name: "ConnectedUserNotificatio")
+    static let AllRecipes = ModelNotificationBase<[Recipe]>(name: "AllRecipesNotificatio")
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)
@@ -36,12 +37,10 @@ class Model{
     init() {
     }
     
-    static func getConnectedUser(){
+    func getConnectedUser(){
         print("Getting connected User")
         FirebaseModel.getCconnectedUserAndObserve { (userEmail) in
             var user = userEmail
-            /*ToDo - add to local database*/
-            
             ModelNotification.ConnectedUser.post(data: user!)
         }
     }
@@ -49,6 +48,12 @@ class Model{
     func addRecipeToDB(recipe: Recipe){
         recipe.addRecipeToLocalDB(database: self.modelSql?.database)
         FirebaseModel.writRecipeToFB(recipe: recipe)
+    }
+    
+    func getRecipesAndObserve(){
+        FirebaseModel.readAllRecipeFromFB { (recipes) in
+            ModelNotification.AllRecipes.post(data: recipes!)
+        }
     }
     
     func getAllRecipeFromSQL()->[Recipe]{

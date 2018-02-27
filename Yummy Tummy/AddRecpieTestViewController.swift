@@ -4,11 +4,15 @@ class AddRecpieTestViewController: UIViewController {
     
     @IBOutlet weak var Text: UITextField!
     @IBOutlet weak var title1: UITextField!
-    @IBOutlet weak var autor: UITextField!
+    var autor:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        ModelNotification.ConnectedUser.observe { (user) in
+            self.autor = user!
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -16,7 +20,8 @@ class AddRecpieTestViewController: UIViewController {
     }
     
     @IBAction func add(_ sender: UIButton) {
-        Model.instance.addRecipeToDB(recipe: Recipe(recpieID: "Test" , recipeText: Text.text!, autor: autor.text!, imageUrl: nil, title: title1.text!))
+        Model.instance.getConnectedUser()
+        Model.instance.addRecipeToDB(recipe: Recipe(recipeText: Text.text!, autor: autor, imageUrl: nil, title: title1.text!))
         
         Model.instance.getAllRecipeFromSQL()
     }

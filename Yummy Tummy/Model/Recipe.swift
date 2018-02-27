@@ -19,7 +19,15 @@ class Recipe{
     var autor:String
     var imageUrl:String?
     
-    init(recpieID:String,recipeText:String,autor:String,imageUrl:String?,title:String) {
+    init(recipeText:String,autor:String,imageUrl:String?,title:String) {
+        self.recpieID = UUID().uuidString
+        self.title = title
+        self.recipeText = recipeText
+        self.autor = autor
+        self.imageUrl = imageUrl
+    }
+    
+    init(recpieID: String, recipeText:String,autor:String,imageUrl:String?,title:String) {
         self.recpieID = recpieID
         self.title = title
         self.recipeText = recipeText
