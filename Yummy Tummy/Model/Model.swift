@@ -44,6 +44,14 @@ class Model{
             
             ModelNotification.ConnectedUser.post(data: user!)
         }
-        
+    }
+    
+    func addRecipeToDB(recipe: Recipe){
+        recipe.addRecipeToLocalDB(database: self.modelSql?.database)
+        FirebaseModel.writRecipeToFB(recipe: recipe)
+    }
+    
+    func getAllRecipeFromSQL()->[Recipe]{
+        return (modelSql?.getAllRecipeFromLocalDB())!
     }
 }
