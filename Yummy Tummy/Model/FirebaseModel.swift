@@ -5,11 +5,11 @@ import GoogleSignIn
 import FBSDKCoreKit
 
 class FirebaseModel: NSObject, GIDSignInDelegate {
-    static var ref:DatabaseReference?
+    static let storageRef = Storage.storage().reference(forURL: "gs://yummy-tummy-5bdc2.appspot.com")
+    static var ref:DatabaseReference? = Database.database().reference()
     var image: UIImage!
     
     override init(){
-        
         super.init()
         FirebaseModel.ref = Database.database().reference()
         

@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class RecipeListViewController: UITableViewController {
     
     let firebase = FirebaseModel()
+    
+    override func viewDidLoad() {
+        FirebaseApp.configure()
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return firebase.getNumberOfImages()

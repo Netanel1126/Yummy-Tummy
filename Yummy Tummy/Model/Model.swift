@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class ModelNotificationBase<T>{
     var name:String?
@@ -58,5 +59,19 @@ class Model{
     
     func getAllRecipeFromSQL()->[Recipe]{
         return (modelSql?.getAllRecipeFromLocalDB())!
+    }
+    
+    static func saveImageToDatabase(image: UIImage, name: String, callback: @escaping (String?) -> Void) {
+        let fileRef = FirebaseModel.storageRef.child(name)
+        if let data = UIImageJPEGRepresentation(image, 0.8) {
+            fileRef.putData(data, metadata: nil) { metadata, error in
+                if error != nil {
+                    callback(nil)
+                } else {
+                    let downloadUrl = metadata!.downloadURL()
+                    callback(downloadUrl?.path)
+                }
+            }
+        }
     }
 }
