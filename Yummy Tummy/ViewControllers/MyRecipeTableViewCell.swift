@@ -4,6 +4,7 @@ class MyRecipeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var recipeImg: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
+    @IBOutlet weak var progress: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

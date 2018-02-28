@@ -249,7 +249,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SAE-Gd-oDg">
-                                            <rect key="frame" x="167" y="147" width="37" height="37"/>
+                                            <rect key="frame" x="169" y="140" width="37" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </activityIndicatorView>
                                     </subviews>
@@ -263,6 +263,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="progress" destination="SAE-Gd-oDg" id="WQc-UU-i9Q"/>
                                     <outlet property="recipeImg" destination="FK8-ir-ltz" id="9BC-R4-NTF"/>
                                     <outlet property="recipeTitle" destination="lYW-yl-x2i" id="RMF-Sn-F60"/>
                                 </connections>
