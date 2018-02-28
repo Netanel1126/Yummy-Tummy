@@ -17,7 +17,7 @@ class ModelNotificationBase<T>{
     }
     
     func post(data:T?){
-        NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
+        NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data]) 
     }
 }
 
