@@ -11,6 +11,7 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
     
     override init(){
         super.init()
+        FirebaseModel.ref = Database.database().reference()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
