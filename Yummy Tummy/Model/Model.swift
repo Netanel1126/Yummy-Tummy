@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class ModelNotificationBase<T>{
     var name:String?
@@ -15,7 +16,7 @@ class ModelNotificationBase<T>{
         }
     }
     
-    func post(data:T){
+    func post(data:T?){
         NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
     }
 }
@@ -41,7 +42,7 @@ class Model{
         print("Getting connected User")
         FirebaseModel.getCconnectedUserAndObserve { (userEmail) in
             var user = userEmail
-            ModelNotification.ConnectedUser.post(data: user!)
+            ModelNotification.ConnectedUser.post(data: user)
         }
     }
     
@@ -58,5 +59,19 @@ class Model{
     
     func getAllRecipeFromSQL()->[Recipe]{
         return (modelSql?.getAllRecipeFromLocalDB())!
+    }
+    
+    static func saveImageToDatabase(image: UIImage, name: String, callback: @escaping (String?) -> Void) {
+        let fileRef = FirebaseModel.storageRef.child(name)
+        if let data = UIImageJPEGRepresentation(image, 0.8) {
+            fileRef.putData(data, metadata: nil) { metadata, error in
+                if error != nil {
+                    callback(nil)
+                } else {
+                    let downloadUrl = metadata!.downloadURL()
+                    callback(downloadUrl?.path)
+                }
+            }
+        }
     }
 }
