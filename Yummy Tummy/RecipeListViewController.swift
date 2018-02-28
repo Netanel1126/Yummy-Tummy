@@ -23,5 +23,5 @@ class RecipeListViewController: UITableViewController {
         cell.recipeImage.image = firebase.image
 
         return cell
-    }*/
+    }
 }

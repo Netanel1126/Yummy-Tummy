@@ -15,7 +15,7 @@ class ModelNotificationBase<T>{
         }
     }
     
-    func post(data:T){
+    func post(data:T?){
         NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
     }
 }
@@ -41,7 +41,7 @@ class Model{
         print("Getting connected User")
         FirebaseModel.getCconnectedUserAndObserve { (userEmail) in
             var user = userEmail
-            ModelNotification.ConnectedUser.post(data: user!)
+            ModelNotification.ConnectedUser.post(data: user)
         }
     }
     
