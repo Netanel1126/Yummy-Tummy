@@ -26,7 +26,7 @@ extension Recipe{
         return true
     }
     
-    func addRecipeToLocalDB(database:OpaquePointer?){
+    func addRecipeToLocalDB(database:OpaquePointer?) -> Bool{
         var sqlite3_stmt: OpaquePointer? = nil
         
         if (sqlite3_prepare_v2(database,"INSERT OR REPLACE INTO " + Recipe.REC_TABLE
@@ -52,8 +52,10 @@ extension Recipe{
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
                 print("A new Recipe row added succefully")
+                return true
             }
         }
+        return false
     }
     
     func getRecipeFromLocalDB(byId:String,database:OpaquePointer?) -> Recipe?{
