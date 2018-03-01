@@ -8,7 +8,7 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate {
     var test:UITextView?
     
     var PLACEHOLDER_TEXT:String = "(Example Recipe)\n"
-    + "Ingredients\n1 cup Nutella\n1 egg\n1 cup flour\nDirections\n1. Pre-heat oven to 350 degrees\n" +
+        + "Ingredients\n1 cup Nutella\n1 egg\n1 cup flour\nDirections\n1. Pre-heat oven to 350 degrees\n" +
     "2. Mix all ingredients together\n3. Bake for 6-8 minutes\n4. Push down with  a fork while they are still warm"
     
     var autor:String = ""
@@ -18,6 +18,12 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate {
         super.viewDidLoad()
         ModelNotification.ConnectedUser.observe { (user) in
             self.autor = user!
+        }
+        
+        ModelNotification.AddRecipe.observe { (saved) in
+            if(saved)!{
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         
         recipeText?.delegate = self
@@ -30,7 +36,7 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate {
     
     @IBAction func add(_ sender: UIButton) {
         Model.instance.getConnectedUser()
-        Model.instance.addRecipeToDB(recipe: Recipe(recipeText: recipeText.text!, autor: autor, imageUrl: nil, title: title1.text!))
+        Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: recipeText.text!, autor: autor, imageUrl: nil, title: title1.text!))
     }
     
     func applyPlaceholderStyle(aTextview: UITextView, placeholderText: String)
