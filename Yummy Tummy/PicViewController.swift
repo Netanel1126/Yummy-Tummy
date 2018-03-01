@@ -11,6 +11,7 @@ import Firebase
 
 class PicViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var progressSpinner: UIActivityIndicatorView!
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var stImage: UIImageView!
     var selectedImage: UIImage?
@@ -38,11 +39,32 @@ class PicViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         }
     }
     
-    @IBAction func postImageToFirebase(_ sender: Any) {
-        Model.saveImageToDatabase(image: selectedImage!, name: titleText.text! + ".png") { name in print(name) }
+    @IBAction func postImage(_ sender: Any) {
+        self.progressSpinner.startAnimating()
+        Model.instance.saveImageToDatabase(image: selectedImage!, name: titleText.text! + ".jpg") { imageFirebasePath in
+            if imageFirebasePath != nil {
+                // After saving the recipe image in Firebase Storage, save its url in the Firebase Database and add the recipe to local cache
+                // as a file and as an entry in SQLite local database.
+                Model.instance.saveImageToLocalCache(image: self.selectedImage!, name: self.titleText.text!)
+                Model.instance.addRecipeToDB(recipe: Recipe(recipeText: "", autor: "", imageUrl: imageFirebasePath, title: self.titleText.text!))
+                self.progressSpinner.stopAnimating()
+            }
+        }
     }
     
-    
+    // Testing
+    @IBAction func getPictureFromStorage(_ sender: Any) {
+        self.progressSpinner.startAnimating()
+        Model.instance.getImageFromFirebase(url: FirebaseModel.storageRootPath + "/myPic.jpg") { (image) in
+            if image != nil {
+                self.selectedImage = image!
+                self.stImage.image = self.selectedImage
+            } else {
+                print("nil was returned from Firebase")
+            }
+            self.progressSpinner.stopAnimating()
+        }
+    }
     
     
     
