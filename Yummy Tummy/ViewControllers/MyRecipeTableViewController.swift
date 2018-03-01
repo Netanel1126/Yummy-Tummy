@@ -31,12 +31,12 @@ class MyRecipeTableViewController: UITableViewController {
             
             destVewController.titelText = recipe.title
             destVewController.recipeText = recipe.recipeText
+            destVewController.myRecipe = recipe
             if recipe.imageUrl == nil{
                 destVewController.image = UIImage(named: "Logo1")!
             } else {
                 destVewController.image = precedCellImg!
             }
-            //destVewController.recipeImg.image = /ToDo/
         }
     }
     
@@ -44,7 +44,6 @@ class MyRecipeTableViewController: UITableViewController {
         let cell:MyRecipeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "my_recipe_cell", for: indexPath) as! MyRecipeTableViewCell
         
         let content = myRecipes[indexPath.row]
-        //cell.recipeImge = ToDo
         if content.imageUrl == nil{
             cell.recipeImg.image = UIImage(named: "Logo1")
         } else {

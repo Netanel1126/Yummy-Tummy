@@ -8,6 +8,7 @@ class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButto
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var emailTaxt: UITextField!
     @IBOutlet weak var passworText: UITextField!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButto
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        spinner.stopAnimating()
+        spinner.isHidden = true
         Model.instance.getConnectedUser()
     }
     

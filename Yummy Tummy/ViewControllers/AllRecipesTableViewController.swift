@@ -50,7 +50,6 @@ class AllRecipesTableViewController: UITableViewController
             } else {
                 destVewController.image = precedCellImg!
             }
-            //destVewController.recipeImg.image = /ToDo/
         }
     }
     
@@ -66,8 +65,8 @@ class AllRecipesTableViewController: UITableViewController
             })
         }
         cell.recipeTitle.text = content.title
-        //cell.progress.stopAnimating()
-        //cell.progress.isHidden = true
+        cell.spiner.stopAnimating()
+        cell.spiner.isHidden = true
         return cell
     }
     

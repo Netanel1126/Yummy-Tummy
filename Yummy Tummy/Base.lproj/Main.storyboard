@@ -65,6 +65,10 @@
                                 <rect key="frame" x="67" y="35" width="240" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Pi5-oS-obv">
+                                <rect key="frame" x="172" y="445" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -82,6 +86,7 @@
                         <outlet property="backgroundImg" destination="JXZ-yt-RQ8" id="Gg7-sD-zmj"/>
                         <outlet property="emailTaxt" destination="yMn-Xu-vmJ" id="5gg-mP-Zfl"/>
                         <outlet property="passworText" destination="Dux-5P-ezU" id="0aT-S7-sJj"/>
+                        <outlet property="spinner" destination="Pi5-oS-obv" id="UlU-36-HOm"/>
                         <segue destination="smq-NZ-iTP" kind="show" identifier="LogedIn" id="jkL-54-AnJ"/>
                     </connections>
                 </viewController>
@@ -100,7 +105,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKL-BJ-D4z">
                                 <rect key="frame" x="28" y="119" width="319" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -122,7 +127,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OsW-UB-ZWK">
                                 <rect key="frame" x="28" y="193" width="319" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -134,21 +139,27 @@
                                     <action selector="getImageFromGallery:" destination="Vwu-c8-ucS" eventType="touchUpInside" id="hby-Ik-rot"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-Ha-vdB">
-                                <rect key="frame" x="135" y="530" width="105" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e80-sp-3Lw">
+                                <rect key="frame" x="28" y="394" width="319" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-Ha-vdB">
+                                <rect key="frame" x="135" y="544" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addRecipe:" destination="Vwu-c8-ucS" eventType="touchUpInside" id="pAn-4v-vYv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e80-sp-3Lw">
-                                <rect key="frame" x="28" y="394" width="319" height="128"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="W9H-QB-Jgy">
+                                <rect key="frame" x="166" y="141" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="e7v-VQ-9Eb"/>
                     </view>
                     <toolbarItems>
@@ -158,18 +169,19 @@
                     <connections>
                         <outlet property="recipeImage" destination="e80-sp-3Lw" id="33a-Lr-WNk"/>
                         <outlet property="recipeText" destination="OsW-UB-ZWK" id="6d0-lO-K7y"/>
+                        <outlet property="spiner" destination="W9H-QB-Jgy" id="kyt-Cv-Acr"/>
                         <outlet property="title1" destination="HKL-BJ-D4z" id="fGe-Ti-V4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vz4-Fa-vZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5788" y="77.811094452773617"/>
+            <point key="canvasLocation" x="5871" y="78"/>
         </scene>
         <!--My Recpies-->
         <scene sceneID="qrR-6S-eOx">
             <objects>
                 <navigationController id="rgV-Pg-36D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Recpies" id="379-27-2yS"/>
+                    <tabBarItem key="tabBarItem" title="My Recpies" image="man" selectedImage="man" id="379-27-2yS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sUS-W1-zmL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -240,7 +252,7 @@
                             <outlet property="delegate" destination="Kau-0e-93D" id="wCG-XS-r6m"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="My Recpies" id="Tib-Xf-8ue"/>
+                    <tabBarItem key="tabBarItem" title="My Recpies" selectedImage="man" id="Tib-Xf-8ue"/>
                     <navigationItem key="navigationItem" title="My Recpies" id="wGP-bS-Qa9">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="2qi-DA-HKS">
                             <connections>
@@ -260,7 +272,7 @@
         <scene sceneID="mE7-Tc-W4n">
             <objects>
                 <navigationController id="t3x-3P-l49" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recpies" id="ypB-DA-G3I"/>
+                    <tabBarItem key="tabBarItem" title="Recpies" image="noodle" selectedImage="noodle" id="ypB-DA-G3I"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TWp-wc-Moo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -318,11 +330,16 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vht-Gr-1wF">
+                                            <rect key="frame" x="169" y="115" width="37" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="recipeImage" destination="PCR-EC-Vph" id="Rly-9o-W94"/>
                                     <outlet property="recipeTitle" destination="17Y-lb-ryt" id="HEl-Wb-NIG"/>
+                                    <outlet property="spiner" destination="Vht-Gr-1wF" id="fXW-Nn-gLh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -331,7 +348,7 @@
                             <outlet property="delegate" destination="mFg-NR-1b0" id="MY9-c2-rsk"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Recpies" id="RYu-gS-gpT"/>
+                    <tabBarItem key="tabBarItem" title="Recpies" selectedImage="noodle" id="RYu-gS-gpT"/>
                     <navigationItem key="navigationItem" title="Recipes" id="dwo-6O-SxM"/>
                     <connections>
                         <segue destination="jTw-Ru-Lxm" kind="show" identifier="toSelectedRecipe" id="1jl-Xr-0dl"/>
@@ -350,11 +367,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EZG-cx-1fa">
-                                <rect key="frame" x="16" y="82" width="343" height="279"/>
+                                <rect key="frame" x="16" y="132" width="343" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Recipe" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lkr-Jj-P97">
-                                <rect key="frame" x="49" y="397" width="280" height="201"/>
+                                <rect key="frame" x="16" y="397" width="343" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -364,6 +381,17 @@
                                 <rect key="frame" x="171" y="203" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-yQ-yN9">
+                                <rect key="frame" x="16" y="83" width="77" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="DQJ-Ve-sg9" eventType="touchUpInside" id="5xz-AC-txJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8PW-Tm-nbI"/>
@@ -419,5 +447,7 @@
     <resources>
         <image name="Logo1" width="1600" height="1200"/>
         <image name="Welcome-Image" width="500" height="266"/>
+        <image name="man" width="30" height="30"/>
+        <image name="noodle" width="30" height="30"/>
     </resources>
 </document>
