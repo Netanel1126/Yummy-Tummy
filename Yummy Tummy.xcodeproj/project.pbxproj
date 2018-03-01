@@ -30,13 +30,11 @@
 		84069BFB204861B800BD55CC /* AllRecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84069BFA204861B800BD55CC /* AllRecipesTableViewCell.swift */; };
 		842864462043209C00196037 /* WorkWithStorage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842864452043209C00196037 /* WorkWithStorage.storyboard */; };
 		842864482043218300196037 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842864472043218300196037 /* CustomTableViewCell.swift */; };
-		8445181D20482AA0005DA4A1 /* DeleteImageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445181C20482AA0005DA4A1 /* DeleteImageTestViewController.swift */; };
 		844518212048A704005DA4A1 /* AddRecpieTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844518202048A703005DA4A1 /* AddRecpieTestViewController.swift */; };
 		846BFA052045649600809030 /* Recipe+Sql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BFA042045649600809030 /* Recipe+Sql.swift */; };
 		84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84700FEA2001339700677DFB /* GoogleService-Info.plist */; };
 		84700FED2001613400677DFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84700FEC2001613300677DFB /* libsqlite3.0.tbd */; };
 		847511592044A07D00CE26F9 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847511582044A07D00CE26F9 /* RecipeListViewController.swift */; };
-		849B4123204188110042946C /* Log in Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B4122204188110042946C /* Log in Screen.storyboard */; };
 		849B412520418B750042946C /* LogIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B412420418B750042946C /* LogIn_ViewController.swift */; };
 		849B412D204237DD0042946C /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 840084962040415C0039E93F /* Loading.gif */; };
 		84A110AB2047626B007FD27F /* MyRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A110AA2047626B007FD27F /* MyRecipeViewController.swift */; };
@@ -93,13 +91,11 @@
 		84069BFA204861B800BD55CC /* AllRecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesTableViewCell.swift; sourceTree = "<group>"; };
 		842864452043209C00196037 /* WorkWithStorage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkWithStorage.storyboard; sourceTree = "<group>"; };
 		842864472043218300196037 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		8445181C20482AA0005DA4A1 /* DeleteImageTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteImageTestViewController.swift; sourceTree = "<group>"; };
 		844518202048A703005DA4A1 /* AddRecpieTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddRecpieTestViewController.swift; path = ../../../AddRecpieTestViewController.swift; sourceTree = "<group>"; };
 		846BFA042045649600809030 /* Recipe+Sql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+Sql.swift"; sourceTree = "<group>"; };
 		84700FEA2001339700677DFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84700FEC2001613300677DFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		847511582044A07D00CE26F9 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
-		849B4122204188110042946C /* Log in Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Log in Screen.storyboard"; sourceTree = "<group>"; };
 		849B412420418B750042946C /* LogIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_ViewController.swift; sourceTree = "<group>"; };
 		84A110AA2047626B007FD27F /* MyRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeViewController.swift; sourceTree = "<group>"; };
 		84E8091C2044A4B700A9D341 /* Yummy Tummy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yummy Tummy-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -215,10 +211,8 @@
 				30430D201FFD37BD00CA2B77 /* LaunchScreen.storyboard */,
 				30430D231FFD37BD00CA2B77 /* Info.plist */,
 				84700FEA2001339700677DFB /* GoogleService-Info.plist */,
-				849B4122204188110042946C /* Log in Screen.storyboard */,
 				84E8091C2044A4B700A9D341 /* Yummy Tummy-Bridging-Header.h */,
 				36BC31282046E2E300044E3D /* PicViewController.swift */,
-				8445181C20482AA0005DA4A1 /* DeleteImageTestViewController.swift */,
 			);
 			path = "Yummy Tummy";
 			sourceTree = "<group>";
@@ -382,7 +376,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84700FEB2001339800677DFB /* GoogleService-Info.plist in Resources */,
-				849B4123204188110042946C /* Log in Screen.storyboard in Resources */,
 				842864462043209C00196037 /* WorkWithStorage.storyboard in Resources */,
 				30430D221FFD37BD00CA2B77 /* LaunchScreen.storyboard in Resources */,
 				849B412D204237DD0042946C /* Loading.gif in Resources */,
@@ -589,7 +582,6 @@
 				840084952040405D0039E93F /* Swift+Gif.swift in Sources */,
 				30430D181FFD37BD00CA2B77 /* AppDelegate.swift in Sources */,
 				3023004C2046C90A0034AA20 /* MyRecipeTableViewController.swift in Sources */,
-				8445181D20482AA0005DA4A1 /* DeleteImageTestViewController.swift in Sources */,
 				30430D471FFD39E900CA2B77 /* User.swift in Sources */,
 				84069BFB204861B800BD55CC /* AllRecipesTableViewCell.swift in Sources */,
 				84069BF7204838BC00BD55CC /* AllRecipesTableViewController.swift in Sources */,
