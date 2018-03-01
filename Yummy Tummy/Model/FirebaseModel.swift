@@ -80,6 +80,7 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
             for child in snapshot.children.allObjects{
                 if let childData = child as? DataSnapshot{
                     if let json = childData.value as? Dictionary<String,Any>{
+                        print(json["recpieID"], json["autor"], json["title"])
                         let rec = Recipe(fromJson: json)
                         myRecipes.append(rec)
                     }
@@ -87,7 +88,6 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
             }
             callback(myRecipes)
         }
-        
         myRef?.observe(DataEventType.value, with: handler)
     }
     

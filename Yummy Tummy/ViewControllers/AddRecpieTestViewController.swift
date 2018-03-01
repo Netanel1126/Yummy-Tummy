@@ -50,13 +50,14 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate, UIImageP
         }
     }
     
-    @IBAction func add(_ sender: UIButton) {
-        //Model.instance.getConnectedUser()
+    @IBAction func addRecipe(_ sender: Any) {
+        Model.instance.getConnectedUser()
         Model.instance.saveImageToDatabase(image: selectedImage!, name: title1.text!, callback: { imageFirebasePath in
-            Model.instance.saveImageToLocalCache(image: selectedImage!, name: imageFirebasePath)
+            Model.instance.saveImageToLocalCache(image: self.selectedImage!, name: imageFirebasePath!)
             Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: self.recipeText.text!, autor: self.autor, imageUrl: imageFirebasePath, title: self.title1.text!))
         })
     }
+    
     
     func applyPlaceholderStyle(aTextview: UITextView, placeholderText: String)
     {

@@ -3,6 +3,7 @@ class MyRecipeTableViewController: UITableViewController {
 
     var myRecipes:[Recipe] = []
     var precedCellIndex = 0
+    var precedCellImg:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,8 @@ class MyRecipeTableViewController: UITableViewController {
             destVewController.recipeText = recipe.recipeText
             if recipe.imageUrl == nil{
                 destVewController.image = UIImage(named: "Logo1")!
+            } else {
+                destVewController.image = precedCellImg!
             }
             //destVewController.recipeImg.image = /ToDo/
         }
@@ -44,6 +47,10 @@ class MyRecipeTableViewController: UITableViewController {
         //cell.recipeImge = ToDo
         if content.imageUrl == nil{
             cell.recipeImg.image = UIImage(named: "Logo1")
+        } else {
+            Model.instance.getImageFromFirebase(url: content.imageUrl!, callback: { image in
+                cell.recipeImg.image = image!
+            })
         }
         cell.recipeTitle.text = content.title
         cell.progress.stopAnimating()
@@ -53,6 +60,8 @@ class MyRecipeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         precedCellIndex = (tableView.indexPathForSelectedRow?.row)!
+        let cell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as! MyRecipeTableViewCell
+        precedCellImg = cell.recipeImg.image
         self.performSegue(withIdentifier: "toMyRecipe", sender: nil)
     }
 }

@@ -36,7 +36,7 @@ class Recipe{
     }
     
     init(fromJson:[String:Any]) {
-        self.recpieID = fromJson["recipeID"] as! String
+        self.recpieID = fromJson["recpieID"] as! String
         self.recipeText = fromJson["recipeText"] as! String
         self.title = fromJson["title"] as! String
         self.autor = fromJson["autor"] as! String

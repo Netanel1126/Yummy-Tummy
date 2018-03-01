@@ -73,7 +73,8 @@ class Model{ // Model is a Singleton!
                     callback(nil)
                 } else {
                     let downloadUrl = metadata!.downloadURL()
-                    callback(downloadUrl?.path)
+                    print(downloadUrl?.absoluteString)
+                    callback(downloadUrl?.absoluteString)
                 }
             }
         }
