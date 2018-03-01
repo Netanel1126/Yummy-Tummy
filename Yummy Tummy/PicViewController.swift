@@ -41,15 +41,15 @@ class PicViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     @IBAction func postImage(_ sender: Any) {
         self.progressSpinner.startAnimating()
-        Model.instance.saveImageToDatabase(image: selectedImage!, name: titleText.text! + ".jpg") { imageFirebasePath in
-            if imageFirebasePath != nil {
-                // After saving the recipe image in Firebase Storage, save its url in the Firebase Database and add the recipe to local cache
-                // as a file and as an entry in SQLite local database.
-                Model.instance.saveImageToLocalCache(image: self.selectedImage!, name: self.titleText.text!)
-                Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: "", autor: "", imageUrl: imageFirebasePath, title: self.titleText.text!))
-                self.progressSpinner.stopAnimating()
-            }
-        }
+//        Model.instance.saveImageToDatabase(image: selectedImage!, name: titleText.text! + ".jpg") { imageFirebasePath in
+//            if imageFirebasePath != nil {
+//                // After saving the recipe image in Firebase Storage, save its url in the Firebase Database and add the recipe to local cache
+//                // as a file and as an entry in SQLite local database.
+//                Model.instance.saveImageToLocalCache(image: self.selectedImage!, name: self.titleText.text!)
+//                Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: "", autor: "", imageUrl: imageFirebasePath, title: self.titleText.text!))
+//                self.progressSpinner.stopAnimating()
+//            }
+//        }
     }
     
     // Testing

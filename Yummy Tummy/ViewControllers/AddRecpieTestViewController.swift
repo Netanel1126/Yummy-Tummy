@@ -1,6 +1,6 @@
 import UIKit
 
-class AddRecpieTestViewController: UIViewController,UITextViewDelegate {
+class AddRecpieTestViewController: UIViewController,UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var recipeText: UITextView!
     @IBOutlet weak var title1: UITextField!
@@ -32,9 +32,28 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        selectedImage = info["UIImagePickerControllerOriginalImage"] as? UIImage
+        self.recipeImage.image = selectedImage
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func getImageFromGallery(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.allowsEditing = true
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func add(_ sender: UIButton) {
-        Model.instance.getConnectedUser()
-        Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: recipeText.text!, autor: autor, imageUrl: nil, title: title1.text!))
+        //Model.instance.getConnectedUser()
+        Model.instance.saveImageToDatabase(image: selectedImage!, name: title1.text!, callback: { imageFirebasePath in
+            Model.instance.saveImageToLocalCache(image: selectedImage!, name: imageFirebasePath)
+            Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: self.recipeText.text!, autor: self.autor, imageUrl: imageFirebasePath, title: self.title1.text!))
+        })
     }
     
     func applyPlaceholderStyle(aTextview: UITextView, placeholderText: String)

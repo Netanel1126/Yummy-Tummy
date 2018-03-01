@@ -48,13 +48,13 @@ class Model{ // Model is a Singleton!
         }
     }
     
-    func addRecipeToDBAndObserve(recipe: Recipe){
+    func addRecipeToDBAndObserve(recipe: Recipe) {
         var data = recipe.addRecipeToLocalDB(database: self.modelSql?.database)
         FirebaseModel.writRecipeToFB(recipe: recipe)
         ModelNotification.AddRecipe.post(data: data)
     }
     
-    func getRecipesAndObserve(){
+    func getRecipesAndObserve() {
         FirebaseModel.readAllRecipeFromFB { (recipes) in
             ModelNotification.AllRecipes.post(data: recipes!)
         }
