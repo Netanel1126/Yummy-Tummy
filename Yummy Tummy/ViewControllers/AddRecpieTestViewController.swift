@@ -4,9 +4,7 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate, UIImageP
     
     @IBOutlet weak var recipeText: UITextView!
     @IBOutlet weak var title1: UITextField!
-    @IBOutlet weak var recipeImage: UIImageView!
-    var selectedImage: UIImage?
-    
+        
     var PLACEHOLDER_TEXT:String = "(Example Recipe)\n"
         + "Ingredients\n1 cup Nutella\n1 egg\n1 cup flour\nDirections\n1. Pre-heat oven to 350 degrees\n" +
     "2. Mix all ingredients together\n3. Bake for 6-8 minutes\n4. Push down with  a fork while they are still warm"

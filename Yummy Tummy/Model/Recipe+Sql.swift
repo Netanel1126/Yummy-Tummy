@@ -58,6 +58,19 @@ extension Recipe{
         return false
     }
     
+    func removeFromSQlLite(database:OpaquePointer?){
+        var sqlite3_stmt: OpaquePointer? = nil
+        if (sqlite3_prepare_v2(database,"DELETE FROM " + Recipe.REC_TABLE
+            + " WHERE " + Recipe.REC_ID + " = ?" /*+ self.recpieID
+            */+ ";",-1, &sqlite3_stmt,nil) == SQLITE_OK){
+            sqlite3_bind_text(sqlite3_stmt, 1, self.recpieID, -1, nil)
+            
+            if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
+                print("Recipe " + self.title + " Was Deleted")
+            }
+        }
+    }
+    
     func getRecipeFromLocalDB(byId:String,database:OpaquePointer?) -> Recipe?{
         return nil
 

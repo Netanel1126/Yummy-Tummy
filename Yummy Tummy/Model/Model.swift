@@ -112,16 +112,8 @@ class Model{ // Model is a Singleton!
         return documentDirectory
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func removeRecipeFromDb(recipe: Recipe){
+        recipe.removeFromSQlLite(database: self.modelSql?.database)
+        FirebaseModel.deleteRecipeFromFB(byId: recipe.recpieID)
+    }
 }

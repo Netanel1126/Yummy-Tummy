@@ -104,6 +104,12 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
         })
     }
     
+    static func deleteRecipeFromFB(byId : String){
+        var myRef = databaseRef?.child("Recipe").child(byId)
+        myRef?.removeValue()
+    }
+    
+    //DELETE
     func writeUserToFirebase(newUser:User){
         let myRef = FirebaseModel.databaseRef?.child("Users").child(newUser.username)
         myRef?.setValue(newUser.toJson())
