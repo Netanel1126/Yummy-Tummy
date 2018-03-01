@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ysN-3F-GKa">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,7 +11,7 @@
             <objects>
                 <viewController id="ysN-3F-GKa" customClass="PicViewController" customModule="Yummy_Tummy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWl-Za-c4a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjA-B7-qI8">
@@ -49,36 +46,50 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Post Recipe"/>
                                 <connections>
-                                    <action selector="postImageToFirebase:" destination="ysN-3F-GKa" eventType="touchUpInside" id="M8q-cf-aoj"/>
+                                    <action selector="postImage:" destination="ysN-3F-GKa" eventType="touchUpInside" id="M8q-cf-aoj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZy-q0-US0">
+                                <rect key="frame" x="64" y="562" width="255" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get Picture From Storage"/>
+                                <connections>
+                                    <action selector="getPictureFromStorage:" destination="ysN-3F-GKa" eventType="touchUpInside" id="be6-2E-IjZ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tdp-dl-a06">
+                                <rect key="frame" x="173" y="276" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9tk-be-Xc0"/>
                     </view>
                     <connections>
+                        <outlet property="progressSpinner" destination="tdp-dl-a06" id="k9b-0j-NS1"/>
                         <outlet property="stImage" destination="An9-nO-zcL" id="KVK-CI-sGR"/>
                         <outlet property="titleText" destination="S3p-sg-lJh" id="lyd-ON-qM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KAn-Sv-5NI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-818" y="-86"/>
+            <point key="canvasLocation" x="-818.39999999999998" y="-86.806596701649184"/>
         </scene>
         <!--Recipe List View Controller-->
         <scene sceneID="9AE-SH-iU2">
             <objects>
                 <tableViewController id="bCM-Rx-klW" customClass="RecipeListViewController" customModule="Yummy_Tummy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1wt-Fg-uNY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="298" id="QL4-yj-P04" customClass="CustomTableViewCell" customModule="Yummy_Tummy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="298"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="298"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QL4-yj-P04" id="YsG-zb-2gf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="297.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="297.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-as-gfa">

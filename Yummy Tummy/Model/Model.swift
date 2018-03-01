@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import Firebase
 
 class ModelNotificationBase<T>{
     var name:String?
@@ -31,7 +32,7 @@ class ModelNotification{
     }
 }
 
-class Model{
+class Model{ // Model is a Singleton!
     static let instance = Model()
     let fire = FirebaseModel()
     lazy private var modelSql:SqLiteModel? = SqLiteModel()
@@ -50,7 +51,6 @@ class Model{
     func addRecipeToDBAndObserve(recipe: Recipe){
         var data = recipe.addRecipeToLocalDB(database: self.modelSql?.database)
         FirebaseModel.writRecipeToFB(recipe: recipe)
-        
         ModelNotification.AddRecipe.post(data: data)
     }
     
@@ -64,7 +64,8 @@ class Model{
         return (modelSql?.getAllRecipeFromLocalDB())!
     }
     
-    static func saveImageToDatabase(image: UIImage, name: String, callback: @escaping (String?) -> Void) {
+    func saveImageToDatabase(image: UIImage, name: String, callback: @escaping (String?) -> Void) {
+        FirebaseModel.storageRef = Storage.storage().reference(forURL: FirebaseModel.storageRootPath)
         let fileRef = FirebaseModel.storageRef.child(name)
         if let data = UIImageJPEGRepresentation(image, 0.8) {
             fileRef.putData(data, metadata: nil) { metadata, error in
@@ -77,4 +78,49 @@ class Model{
             }
         }
     }
+    
+    func getImageFromFirebase(url: String, callback: @escaping (UIImage?) -> Void) {
+        FirebaseModel.storageRef = Storage.storage().reference(forURL: url)
+        FirebaseModel.storageRef.getData(maxSize: 10000000, completion: { (data, error) in
+            if error == nil && data != nil {
+                let image = UIImage(data: data!)
+                callback(image)
+            } else {
+                callback(nil)
+            }
+        })
+    }
+    
+    func saveImageToLocalCache(image: UIImage, name: String) {
+        if let data = UIImageJPEGRepresentation(image, 0.8) {
+            let fileName = getDocumentDirectory().appendingPathComponent(name)
+            try? data.write(to: fileName)
+        } else {
+            print("Something went wrong with compressing the required image")
+        }
+    }
+    
+    func getImageFromLocalCache(name: String) -> UIImage? {
+        let fileName = getDocumentDirectory().appendingPathComponent(name)
+        return UIImage(contentsOfFile: fileName.path)
+    }
+    
+    private func getDocumentDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = paths[0]
+        return documentDirectory
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

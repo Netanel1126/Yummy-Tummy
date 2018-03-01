@@ -5,13 +5,14 @@ import GoogleSignIn
 import FBSDKCoreKit
 
 class FirebaseModel: NSObject, GIDSignInDelegate {
-    static let storageRef = Storage.storage().reference(forURL: "gs://yummy-tummy-5bdc2.appspot.com")
-    static var ref:DatabaseReference? = Database.database().reference()
+    static let storageRootPath = "gs://yummy-tummy-5bdc2.appspot.com"
+    static var storageRef = Storage.storage().reference(forURL: storageRootPath)
+    static var databaseRef:DatabaseReference? = Database.database().reference()
     var image: UIImage!
     
     override init(){
         super.init()
-        FirebaseModel.ref = Database.database().reference()
+        FirebaseModel.databaseRef = Database.database().reference()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
@@ -21,6 +22,7 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
         return Storage.storage().reference().root().accessibilityElementCount()
     }
     
+    // Consider to remove (?)
     func getImage(fromURI: String) {
         let storageRef = Storage.storage().reference(forURL: fromURI)
         storageRef.getData(maxSize: 650 * 1024) { data, error in
@@ -54,24 +56,24 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
     }
     
    static func getCconnectedUserAndObserve(callback: @escaping (String?)-> Void){
-    let userEmail = Auth.auth().currentUser?.email;
-    var test = Auth.auth().currentUser;
-    if userEmail != nil {
-        print ("E: ", test?.email,"U: " , test?.uid ,"P: " , test?.photoURL)
-        callback(userEmail)
-    }
-    else{
-        callback(nil)
-    }
+        let userEmail = Auth.auth().currentUser?.email;
+        let test = Auth.auth().currentUser;
+        if userEmail != nil {
+            print("E: ", test?.email,"U: " , test?.uid ,"P: " , test?.photoURL)
+            callback(userEmail)
+        }
+        else{
+            callback(nil)
+        }
     }
     
    static func writRecipeToFB(recipe:Recipe){
-        var myRef = ref?.child("Recipe").child(recipe.recpieID)
+        let myRef = databaseRef?.child("Recipe").child(recipe.recpieID)
         myRef?.setValue(recipe.toJson())
     }
     
     static func readAllRecipeFromFB(callback: @escaping ([Recipe]?) -> Void){
-        var myRef = ref?.child("Recipe")
+        let myRef = databaseRef?.child("Recipe")
         var myRecipes = [Recipe]()
         
         let handler = {(snapshot:DataSnapshot) in
@@ -90,7 +92,7 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
     }
     
     static func readRecipe(byId: String, callback: @escaping (Recipe?) -> Void){
-        var myRef = ref?.child("Recipe").child(byId)
+        let myRef = databaseRef?.child("Recipe").child(byId)
         
         myRef?.observeSingleEvent(of: .value, with: { (snapshot) in
             if let val = snapshot.value as? [String:Any]{
@@ -103,12 +105,12 @@ class FirebaseModel: NSObject, GIDSignInDelegate {
     }
     
     func writeUserToFirebase(newUser:User){
-        var myRef = FirebaseModel.ref?.child("Users").child(newUser.username)
+        let myRef = FirebaseModel.databaseRef?.child("Users").child(newUser.username)
         myRef?.setValue(newUser.toJson())
     }
     
     func readUserFromFirebase(byId:String, callback: @escaping (User?) -> Void){
-        let myRef = FirebaseModel.ref?.child("Users").child(byId)
+        let myRef = FirebaseModel.databaseRef?.child("Users").child(byId)
         
         myRef?.observeSingleEvent(of: .value, with: { (snapshot) in
             if let val = snapshot.value as? [String:Any]{
