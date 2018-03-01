@@ -29,6 +29,11 @@ class MyRecipeTableViewController: UITableViewController {
             let destVewController = segue.destination as! MyRecipeViewController
             
             destVewController.titelText = recipe.title
+            destVewController.recipeText = recipe.recipeText
+            if recipe.imageUrl == nil{
+                destVewController.image = UIImage(named: "Logo1")!
+            }
+            //destVewController.recipeImg.image = /ToDo/
         }
     }
     
@@ -48,5 +53,6 @@ class MyRecipeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         precedCellIndex = (tableView.indexPathForSelectedRow?.row)!
+        self.performSegue(withIdentifier: "toMyRecipe", sender: nil)
     }
 }

@@ -119,15 +119,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-Rk-jVa">
-                                <rect key="frame" x="150" y="582" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="add:" destination="Vwu-c8-ucS" eventType="touchUpInside" id="D0G-HI-h5F"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e80-sp-3Lw">
                                 <rect key="frame" x="28" y="473" width="319" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,7 +222,6 @@
                                     <outlet property="progress" destination="SAE-Gd-oDg" id="WQc-UU-i9Q"/>
                                     <outlet property="recipeImg" destination="FK8-ir-ltz" id="9BC-R4-NTF"/>
                                     <outlet property="recipeTitle" destination="lYW-yl-x2i" id="RMF-Sn-F60"/>
-                                    <segue destination="DQJ-Ve-sg9" kind="show" identifier="toMyRecipe" id="upd-42-fgU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -248,6 +238,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="DQJ-Ve-sg9" kind="show" identifier="toMyRecipe" id="On5-gr-eKz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGS-mO-SFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,28 +322,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recpie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-FI-v5J">
-                                <rect key="frame" x="47" y="424" width="280" height="166"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EZG-cx-1fa">
                                 <rect key="frame" x="49" y="181" width="280" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YNN-PW-ohk">
+                                <rect key="frame" x="169" y="254" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Recipe" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lkr-Jj-P97">
+                                <rect key="frame" x="49" y="397" width="280" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8PW-Tm-nbI"/>
                     </view>
                     <connections>
-                        <outlet property="recipeLabel" destination="uD6-FI-v5J" id="ATU-09-T0f"/>
+                        <outlet property="recipeImg" destination="EZG-cx-1fa" id="arM-0P-zzO"/>
+                        <outlet property="recipeTextView" destination="lkr-Jj-P97" id="tg5-iI-d0T"/>
+                        <outlet property="spiner" destination="YNN-PW-ohk" id="oP2-nJ-9ns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFx-bk-KLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4993" y="495"/>
+            <point key="canvasLocation" x="4992.8000000000002" y="494.30284857571218"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nBI-iB-X2C">
