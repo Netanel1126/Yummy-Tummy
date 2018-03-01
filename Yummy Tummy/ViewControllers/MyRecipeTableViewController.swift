@@ -1,15 +1,8 @@
-//
-//  MyRecipeTableViewController.swift
-//  Yummy Tummy
-//
-//  Created by Netanel Yeroshalmi on 28/02/2018.
-//  Copyright © 2018 Netanel Yeroshalmi. All rights reserved.
-//
-
 import UIKit
 class MyRecipeTableViewController: UITableViewController {
 
     var myRecipes:[Recipe] = []
+    var precedCellIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +23,14 @@ class MyRecipeTableViewController: UITableViewController {
         return myRecipes.count
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMyRecipe" {
+            let recipe = myRecipes[precedCellIndex]
+            let destVewController = segue.destination as! MyRecipeViewController
+            
+            destVewController.titelText = recipe.title
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:MyRecipeTableViewCell = tableView.dequeueReusableCell(withIdentifier: "my_recipe_cell", for: indexPath) as! MyRecipeTableViewCell
@@ -43,5 +44,9 @@ class MyRecipeTableViewController: UITableViewController {
         cell.progress.stopAnimating()
         cell.progress.isHidden = true
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        precedCellIndex = (tableView.indexPathForSelectedRow?.row)!
     }
 }

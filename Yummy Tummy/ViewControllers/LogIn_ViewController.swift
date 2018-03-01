@@ -5,14 +5,13 @@ import Firebase
 
 class LogIn_ViewController: UIViewController,GIDSignInUIDelegate,FBSDKLoginButtonDelegate {
     
-    let model = Model()
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var emailTaxt: UITextField!
     @IBOutlet weak var passworText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         backgroundImg.loadGif(name: "Loading")
         
         setupFacebookButton()

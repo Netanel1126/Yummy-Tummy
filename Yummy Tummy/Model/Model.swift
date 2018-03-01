@@ -25,6 +25,7 @@ class ModelNotificationBase<T>{
 class ModelNotification{
     static let ConnectedUser = ModelNotificationBase<String>(name: "ConnectedUserNotificatio")
     static let AllRecipes = ModelNotificationBase<[Recipe]>(name: "AllRecipesNotificatio")
+    static let AddRecipe = ModelNotificationBase<Bool>(name: "AddRecipeNotifcation")
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)
@@ -47,9 +48,11 @@ class Model{ // Model is a Singleton!
         }
     }
     
-    func addRecipeToDB(recipe: Recipe){
-        recipe.addRecipeToLocalDB(database: self.modelSql?.database)
+    func addRecipeToDBAndObserve(recipe: Recipe){
+        var data = recipe.addRecipeToLocalDB(database: self.modelSql?.database)
         FirebaseModel.writRecipeToFB(recipe: recipe)
+        
+        ModelNotification.AddRecipe.post(data: data)
     }
     
     func getRecipesAndObserve(){

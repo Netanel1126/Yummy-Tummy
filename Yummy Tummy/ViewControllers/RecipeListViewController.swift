@@ -1,11 +1,3 @@
-//
-//  RecipeListViewController.swift
-//  Yummy Tummy
-//
-//  Created by admin on 26/02/2018.
-//  Copyright © 2018 Netanel Yeroshalmi. All rights reserved.
-//
-
 import UIKit
 import Firebase
 

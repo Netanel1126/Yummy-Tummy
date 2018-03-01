@@ -1,11 +1,3 @@
-//
-//  CustomTableViewCell.swift
-//  Yummy Tummy
-//
-//  Created by admin on 25/02/2018.
-//  Copyright © 2018 Netanel Yeroshalmi. All rights reserved.
-//
-
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
