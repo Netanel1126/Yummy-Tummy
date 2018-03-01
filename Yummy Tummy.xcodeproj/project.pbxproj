@@ -25,6 +25,7 @@
 		473D8863847FF3C4B1A93746 /* Pods_Yummy_Tummy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6183B0D4FE320AB7E6E78F3 /* Pods_Yummy_Tummy.framework */; };
 		6D5EED180F7CC2DE9DCDE57C /* Pods_Yummy_TummyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C58DD93116767F0C932D8AB /* Pods_Yummy_TummyUITests.framework */; };
 		840084952040405D0039E93F /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840084942040405D0039E93F /* Swift+Gif.swift */; };
+		84069BF7204838BC00BD55CC /* AllRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84069BF6204838BC00BD55CC /* AllRecipesTableViewController.swift */; };
 		842864462043209C00196037 /* WorkWithStorage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842864452043209C00196037 /* WorkWithStorage.storyboard */; };
 		842864482043218300196037 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842864472043218300196037 /* CustomTableViewCell.swift */; };
 		8436CCB120482016004A117D /* AddRecpieTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436CCB020482016004A117D /* AddRecpieTestViewController.swift */; };
@@ -84,6 +85,7 @@
 		7C760A8D6B5E8F8E416E4605 /* Pods_Yummy_TummyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yummy_TummyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840084942040405D0039E93F /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
 		840084962040415C0039E93F /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
+		84069BF6204838BC00BD55CC /* AllRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesTableViewController.swift; sourceTree = "<group>"; };
 		842864452043209C00196037 /* WorkWithStorage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkWithStorage.storyboard; sourceTree = "<group>"; };
 		842864472043218300196037 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		8436CCB020482016004A117D /* AddRecpieTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecpieTestViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				3023004B2046C90A0034AA20 /* MyRecipeTableViewController.swift */,
 				302300502046EC960034AA20 /* MyRecipeTableViewCell.swift */,
 				84A110AA2047626B007FD27F /* MyRecipeViewController.swift */,
+				84069BF6204838BC00BD55CC /* AllRecipesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				30430D181FFD37BD00CA2B77 /* AppDelegate.swift in Sources */,
 				3023004C2046C90A0034AA20 /* MyRecipeTableViewController.swift in Sources */,
 				30430D471FFD39E900CA2B77 /* User.swift in Sources */,
+				84069BF7204838BC00BD55CC /* AllRecipesTableViewController.swift in Sources */,
 				84A110AB2047626B007FD27F /* MyRecipeViewController.swift in Sources */,
 				842864482043218300196037 /* CustomTableViewCell.swift in Sources */,
 				302300512046EC960034AA20 /* MyRecipeTableViewCell.swift in Sources */,
