@@ -4,7 +4,10 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate, UIImageP
     
     @IBOutlet weak var recipeText: UITextView!
     @IBOutlet weak var title1: UITextField!
-        
+    @IBOutlet weak var recipeImage: UIImageView!
+    var selectedImage: UIImage?
+    
+    @IBOutlet weak var spiner: UIActivityIndicatorView!
     var PLACEHOLDER_TEXT:String = "(Example Recipe)\n"
         + "Ingredients\n1 cup Nutella\n1 egg\n1 cup flour\nDirections\n1. Pre-heat oven to 350 degrees\n" +
     "2. Mix all ingredients together\n3. Bake for 6-8 minutes\n4. Push down with  a fork while they are still warm"
@@ -14,6 +17,7 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.spiner.isHidden = true
         ModelNotification.ConnectedUser.observe { (user) in
             self.autor = user!
         }
@@ -49,11 +53,19 @@ class AddRecpieTestViewController: UIViewController,UITextViewDelegate, UIImageP
     }
     
     @IBAction func addRecipe(_ sender: Any) {
+        spiner.isHidden = false
+        spiner.startAnimating()
         Model.instance.getConnectedUser()
-        Model.instance.saveImageToDatabase(image: selectedImage!, name: title1.text!, callback: { imageFirebasePath in
-            Model.instance.saveImageToLocalCache(image: self.selectedImage!, name: imageFirebasePath!)
-            Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: self.recipeText.text!, autor: self.autor, imageUrl: imageFirebasePath, title: self.title1.text!))
-        })
+        
+        if(selectedImage != nil){
+        Model.instance.saveImageToDatabase(image: selectedImage!, name: title1.text!, callback:{
+            (imageFirebasePath) in
+            Model.instance.saveImageToLocalCache(image: self.selectedImage!, name: imageFirebasePath!);
+            Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: self.recipeText.text!, autor: self.autor, imageUrl: imageFirebasePath, title: self.title1.text!));
+            })
+        }else{
+            Model.instance.addRecipeToDBAndObserve(recipe: Recipe(recipeText: self.recipeText.text!, autor: self.autor, imageUrl: nil, title: self.title1.text!))
+        }
     }
     
     
